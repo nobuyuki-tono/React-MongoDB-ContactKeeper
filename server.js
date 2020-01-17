@@ -26,6 +26,9 @@ if (process.env.NODE_ENV === "production") {
   );
 }
 
+app.get("/", (req, res) => {
+  res.render("/");
+});
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`server stated on port ${PORT}`));
